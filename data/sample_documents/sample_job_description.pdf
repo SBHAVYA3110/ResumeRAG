@@ -1,0 +1,64 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 1657 >>
+stream
+BT
+/F1 11 Tf
+54 740 Td
+15 TL
+(JOB OPPORTUNITY: LEAD AI & BACKEND DEVELOPER) '
+(Company: InnovateTech AI Solutions) '
+(Location: Remote \(US / Canada\) | Full-Time | Salary: ,000 - ,000 + Equity) '
+() '
+(ABOUT THE ROLE) '
+(InnovateTech AI is building the next-generation enterprise knowledge retrieval platform.) '
+(We are seeking an experienced Lead AI & Backend Developer to own our core RAG microservices.) '
+() '
+(KEY RESPONSIBILITIES) '
+(- Lead the architecture and implementation of scalable RAG pipelines using Python and FastAPI.) '
+(- Integrate advanced LLMs \(Gemini, Claude\) and embedding models for semantic document search.) '
+(- Manage vector databases \(ChromaDB, pgvector\) to optimize similarity search and recall.) '
+(- Design robust relational schemas in PostgreSQL using SQLAlchemy ORM.) '
+(- Implement automated test suites with Pytest and enforce CI/CD pipelines.) '
+(- Collaborate with our React frontend team to deliver intuitive user interfaces.) '
+() '
+(REQUIRED QUALIFICATIONS) '
+(- 5+ years of professional backend engineering experience with Python.) '
+(- 2+ years of hands-on experience building Generative AI or RAG systems.) '
+(- Strong proficiency with FastAPI, Pydantic, and asynchronous Python programming.) '
+(- Production experience with Vector Databases \(ChromaDB, Pinecone, or Weaviate\).) '
+(- Solid knowledge of PostgreSQL, relational database design, and indexing.) '
+(- Familiarity with Docker containerization and cloud deployments.) '
+() '
+(BONUS QUALIFICATIONS) '
+(- Experience with React and TypeScript.) '
+(- Contributions to open-source AI or Python libraries.) '
+(- Cloud certifications \(AWS, GCP\).) '
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000001950 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+2020
+%%EOF

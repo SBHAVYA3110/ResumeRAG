@@ -1,0 +1,97 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R 4 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 5 0 R /Resources << /Font << /F1 7 0 R >> >> >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 6 0 R /Resources << /Font << /F1 7 0 R >> >> >>
+endobj
+5 0 obj
+<< /Length 1573 >>
+stream
+BT
+/F1 11 Tf
+54 740 Td
+15 TL
+(ALEX MORGAN) '
+(Senior Full-Stack & Generative AI Engineer) '
+(Email: alex.morgan@example.com | Phone: \(555\) 019-2834 | Location: San Francisco, CA) '
+(GitHub: github.com/alexmorgan | LinkedIn: linkedin.com/in/alexmorgan-dev) '
+() '
+(PROFESSIONAL SUMMARY) '
+(Senior Software Engineer with 6+ years of expertise in Python backend development,) '
+(microservices architecture, and modern Generative AI engineering. Experienced in building) '
+(high-scale Retrieval-Augmented Generation \(RAG\) pipelines, semantic vector search,) '
+(and high-throughput FastAPI microservices serving over 50,000 daily requests.) '
+() '
+(CORE TECHNICAL SKILLS) '
+(- Languages: Python \(Expert\), JavaScript, TypeScript, SQL, Bash) '
+(- Backend Frameworks: FastAPI, Uvicorn, Flask, Celery, Pydantic, SQLAlchemy) '
+(- Generative AI & RAG: Gemini API, OpenAI API, ChromaDB, Embeddings, Prompt Engineering) '
+(- Databases & Cache: PostgreSQL, Redis, SQLite) '
+(- DevOps & Cloud: Docker, Kubernetes, AWS \(S3, ECS\), Git, GitHub Actions, Linux) '
+(- Frontend: React, HTML5, CSS3, TailwindCSS) '
+() '
+(PROFESSIONAL EXPERIENCE) '
+(Staff AI Engineer | CloudScale Systems \(2022 - Present\)) '
+(- Designed and deployed enterprise RAG pipeline utilizing ChromaDB and Google Gemini.) '
+(- Reduced LLM hallucination rates by 42% by introducing source attribution and chunk scoring.) '
+(- Built asynchronous document ingestion microservices capable of processing 1,000 PDFs/hr.) '
+(- Mentored 5 junior and mid-level engineers on production Python and API best practices.) '
+ET
+endstream
+endobj
+6 0 obj
+<< /Length 1041 >>
+stream
+BT
+/F1 11 Tf
+54 740 Td
+15 TL
+(ALEX MORGAN - PAGE 2) '
+() '
+(PROFESSIONAL EXPERIENCE \(CONTINUED\)) '
+(Senior Backend Engineer | FinTech Labs Inc. \(2019 - 2022\)) '
+(- Designed and maintained distributed payment microservices handling  monthly transactions.) '
+(- Implemented SQLAlchemy ORM models and Alembic database migrations on PostgreSQL.) '
+(- Optimized slow database queries, reducing average API response latency from 320ms to 45ms.) '
+(- Containerized legacy monoliths into Docker containers orchestrated via Kubernetes.) '
+() '
+(EDUCATION) '
+(Bachelor of Science in Computer Science) '
+(University of California, Berkeley \(2015 - 2019\)) '
+(Honors: Magna Cum Laude, Dean List) '
+() '
+(CERTIFICATIONS) '
+(- AWS Certified Solutions Architect - Professional) '
+(- Google Cloud Certified - Professional Machine Learning Engineer) '
+() '
+(NOTABLE OPEN SOURCE PROJECTS) '
+(- ResumeRAG: End-to-end RAG assistant comparing resumes with job descriptions.) '
+(- FastVector: Lightweight wrapper for vector search benchmarks in Python.) '
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000121 00000 n 
+0000000247 00000 n 
+0000000373 00000 n 
+0000001998 00000 n 
+0000003091 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+3161
+%%EOF

@@ -1,0 +1,53 @@
+version: '3.8'
+
+services:
+  # ==============================================================================
+  # Primary Application Service (FastAPI + ChromaDB + React Dashboard)
+  # ==============================================================================
+  resumerag:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: resumerag_app
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      - HOST=0.0.0.0
+      - PORT=8000
+      - CHROMA_PERSIST_DIRECTORY=./chroma_db
+      - DATABASE_URL=sqlite:///./resumerag.db
+    volumes:
+      # Persist vector database embeddings across container restarts
+      - chroma_data:/app/chroma_db
+      # Persist SQLite relational records
+      - sqlite_data:/app/data_persist
+    restart: unless-stopped
+
+  # ==============================================================================
+  # Optional: PostgreSQL Database Service
+  # Enable by running: docker compose --profile postgres up
+  # ==============================================================================
+  postgres:
+    image: postgres:16-alpine
+    container_name: resumerag_postgres
+    profiles:
+      - postgres
+    environment:
+      POSTGRES_USER: resumerag_user
+      POSTGRES_PASSWORD: resumerag_secure_password
+      POSTGRES_DB: resumerag_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+volumes:
+  chroma_data:
+    driver: local
+  sqlite_data:
+    driver: local
+  postgres_data:
+    driver: local
