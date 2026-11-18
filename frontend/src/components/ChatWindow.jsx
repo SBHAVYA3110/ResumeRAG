@@ -53,7 +53,7 @@ export default function ChatWindow({ documents }) {
       const response = await api.askQuestion(
         trimmed,
         selectedDocFilter || null,
-        4,
+        8,
       );
 
       const botMessage = {

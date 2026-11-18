@@ -198,11 +198,52 @@ class LLMService:
         query_words = {w for w in re.findall(r"[a-z0-9]+", query.lower()) if len(w) >= 3}
         # Filter out common stop words and generic question terms
         stop_words = {
-            "what", "the", "does", "have", "candidate", "for", "with",
-            "and", "name", "who", "where", "when", "how", "why",
-            "are", "about", "tell", "show", "give", "list"
+            "what", "the", "does", "have", "for", "with",
+            "and", "who", "where", "when", "how", "why",
+            "are", "about", "tell", "show", "give", "list",
+            "this", "that", "from", "into"
         }
         significant_words = query_words - stop_words
+
+        # Special heuristic for candidate/applicant name inquiries in resumes
+        name_patterns = (
+            "candidate's name", "candidate name", "candidate's full name",
+            "candidate full name", "applicant name", "name of the candidate",
+            "who is the candidate", "person's name", "candidate's first name",
+            "candidate's last name", "full name of candidate"
+        )
+        clean_q = query.lower().strip("? .")
+        is_candidate_name_query = any(p in clean_q for p in name_patterns) or clean_q in (
+            "candidate name", "candidate's name", "full name", "what is their name", "name", "who is this"
+        )
+        if is_candidate_name_query:
+            for chunk in context_chunks:
+                lines = [line.strip() for line in chunk.text.split("\n") if line.strip()]
+                if lines and chunk.chunk_index == 0:
+                    first_line = lines[0]
+                    # Typically candidate names are short (1-4 words) at the top of chunk 0
+                    if 1 <= len(first_line.split()) <= 4 and not any(kw in first_line.lower() for kw in ("job", "role", "summary", "project")):
+                        cite = f"{chunk.source_doc} (Page {chunk.page_number})"
+                        return AnswerWithCitations(
+                            answer=f"Based on the provided document:\n- Candidate Name: {first_line} [Source: {cite}]",
+                            citations=[cite],
+                            is_grounded=True,
+                        )
+
+        # Special heuristic for location / address / contact inquiries in resumes
+        is_location_query = any(w in query.lower() for w in ("location", "where", "city", "state", "address", "phone", "email"))
+        if is_location_query:
+            for chunk in context_chunks:
+                lines = [line.strip() for line in chunk.text.split("\n") if line.strip()]
+                if len(lines) >= 2 and chunk.chunk_index == 0:
+                    contact_line = lines[1]
+                    if any(sym in contact_line for sym in ("|", ",", "@", "+91", "+1")) and not any(kw in contact_line.lower() for kw in ("summary", "skills")):
+                        cite = f"{chunk.source_doc} (Page {chunk.page_number})"
+                        return AnswerWithCitations(
+                            answer=f"Based on the provided document:\n- {contact_line} [Source: {cite}]",
+                            citations=[cite],
+                            is_grounded=True,
+                        )
 
         if not significant_words:
             return AnswerWithCitations(

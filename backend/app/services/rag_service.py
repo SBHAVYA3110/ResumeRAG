@@ -73,7 +73,7 @@ class RAGPipeline:
         self,
         query: str,
         document_filter: Optional[str] = None,
-        n_results: int = 4,
+        n_results: int = 8,
     ) -> QueryResponse:
         """
         End-to-End Grounded Q&A Workflow:

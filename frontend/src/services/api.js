@@ -71,7 +71,7 @@ export const api = {
    * @param {string|null} documentFilter - Optional document to restrict context to.
    * @param {number} nResults - Number of chunks to retrieve (default: 4).
    */
-  async askQuestion(query, documentFilter = null, nResults = 4) {
+  async askQuestion(query, documentFilter = null, nResults = 8) {
     const response = await fetch(`${API_BASE}/chat`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },

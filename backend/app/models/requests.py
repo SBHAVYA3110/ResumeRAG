@@ -14,7 +14,7 @@ class ChatRequest(BaseModel):
         None,
         description="Optional filename to restrict search to a specific document (e.g. 'my_resume.pdf')",
     )
-    n_results: int = Field(4, ge=1, le=10, description="Number of context chunks to retrieve (default: 4)")
+    n_results: int = Field(8, ge=1, le=20, description="Number of context chunks to retrieve (default: 8)")
 
 
 class MatchRequest(BaseModel):
